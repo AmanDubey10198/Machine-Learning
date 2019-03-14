@@ -40,13 +40,13 @@ RawData = pd.read_csv('mnist_train.csv')
 # In[14]:
 
 
-RawData.head()
+print(RawData.head())
 
 
 # In[15]:
 
 
-RawData.info()
+print(RawData.info())
 
 
 # The data has first columns as 'label' and have 60k entries and 784 column apart from label, and data type of each value in int64.
@@ -106,7 +106,7 @@ X = InterestedData.iloc[:,:]
 # In[22]:
 
 
-X.shape
+print(X.shape)
 
 
 # Concatenating the bias term in front of the list.
@@ -137,13 +137,13 @@ X = X/255
 # In[26]:
 
 
-X.shape
+print(X.shape)
 
 
 # In[27]:
 
 
-y.shape
+print(y.shape)
 
 
 # Weights in i.e. theta0 are initialised a value between 0 to 1.
@@ -293,7 +293,7 @@ for i in range(10):
 # In[67]:
 
 
-J
+print(J)
 
 
 # In[64]:
@@ -329,7 +329,7 @@ for i in range(10):
 # In[66]:
 
 
-ThetaAll.shape
+print(ThetaAll.shape)
 
 
 # In[67]:
@@ -369,7 +369,7 @@ for i in range(10):
 # In[71]:
 
 
-J
+print(J)
 
 
 # In[72]:
@@ -382,7 +382,7 @@ print(check)
 # In[73]:
 
 
-np.unique(check)
+print(np.unique(check))
 
 
 # ### Now Testing the model on the mnist_test dataset
@@ -396,7 +396,7 @@ TestData = pd.read_csv("mnist_test.csv")
 # In[75]:
 
 
-TestData.head()
+print(TestData.head())
 
 
 # In[76]:
@@ -408,7 +408,7 @@ X_test = TestData.iloc[:,1:]
 # In[77]:
 
 
-X_test.shape
+print(X_test.shape)
 
 
 # In[78]:
@@ -427,7 +427,7 @@ print(X_test.shape)
 # In[80]:
 
 
-ThetaAll.shape
+print(ThetaAll.shape)
 
 
 # Calculate the sigmoid function value on the test dataset.
@@ -465,13 +465,13 @@ y = TestData['label']
 # In[85]:
 
 
-pred.shape
+print(pred.shape)
 
 
 # In[86]:
 
 
-y.shape
+print(y.shape)
 
 
 # Cal contain the value in 0 and 1.<br>
@@ -489,5 +489,5 @@ cal = (pred == y)*1
 # In[90]:
 
 
-cal.mean()
+print(cal.mean())
 
